@@ -33,3 +33,37 @@ SELECT * FROM `posts` WHERE `title` LIKE 'Hallo Welt%'
 
 Zeige Einträge die mit "Hallo Welt" beginnen und dann genau noch ein Zeichen danach haben
 SELECT * FROM `posts` WHERE `title` LIKE 'Hallo Welt (_)'
+
+Zeige Spalten, bei denen die id in der Menge (1,2 oder 3) liegt.
+SELECT * FROM `posts` WHERE `id` IN(1,2,3)
+
+Der Rückgabe einen Titel "Anzahl" geben
+SELECT COUNT(*) AS Anzahl FROM `posts` 
+
+Nur unterschiedliche Titel anzeigen
+SELECT DISTINCT `title` FROM `posts` 
+
+Abfrage nach Titel gruppieren und Anzahl pro Gruppe angeben
+SELECT  `title`, COUNT(*) FROM `posts` GROUP BY `title`
+
+--> Achtung, wenn man die Spalte COUNT(*) weiterverwenden will für eine Selektion braucht man HAVING
+--> HAVING kommt im Gegensatz zu WHERE erst nachdem der erste Teil ausgeführt wurde
+SELECT  `title`, COUNT(*) AS Count FROM `posts` GROUP BY `title` HAVING `COUNT`>1
+
+Resultate absteigend nach views sortieren
+SELECT * FROM `posts` ORDER BY `views` DESC
+
+Nur die ersten beiden Zeilen zurückgeben (nach Sortierung)
+SELECT * FROM `posts` ORDER BY `views` DESC LIMIT 2
+
+Die ersten drei Zeilen überspringen und dann zwei zurückgeben (nach Sortierung)
+SELECT * FROM `posts` ORDER BY `views` DESC LIMIT 3, 2
+
+Mehrere Werte in einer Spalte kombinieren
+SELECT CONCAT(`firstname`," ",`lastname`) FROM `students` 
+
+Zeilen mit NULL im Titel ausgeben (Spezialfall: hier muss IS verwendet werden)
+SELECT * FROM `posts` WHERE `title` IS NULL
+
+
+
