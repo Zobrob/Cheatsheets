@@ -1,0 +1,8 @@
+Alle Spalten und Zeilen einer Tabelle "students" auswählen:
+SELECT * FROM `students` 
+
+Nur die Zeile mit einer id von "1" auswählen
+SELECT * FROM `students` WHERE id='1'
+
+Von allen Zeilen nur die Spalte "firstname" auswählen
+SELECT `firstname` FROM `students` 
