@@ -1,0 +1,11 @@
+<form action="submit.php" method="post">
+    <p>
+    <label for="firstname">Firstname: </label>
+    <input type="text" name="firstname" id="firstname">
+    </p>
+    <p>
+    <label for="lastname">Lastname: </label>
+    <input type="text" name="lastname" id="lastname">
+    </p>
+    <input type="submit" value="Submit">
+</form>
