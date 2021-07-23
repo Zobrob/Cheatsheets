@@ -1,68 +1,68 @@
-Alle Spalten und Zeilen einer Tabelle "students" auswählen:
+--Alle Spalten und Zeilen einer Tabelle "students" auswählen:
 SELECT * FROM `students` 
 
-Nur die Zeile mit einer id von "1" auswählen
+--Nur die Zeile mit einer id von "1" auswählen
 SELECT * FROM `students` WHERE id='1'
 
-Von allen Zeilen nur die Spalte "firstname" auswählen
+--Von allen Zeilen nur die Spalte "firstname" auswählen
 SELECT `firstname` FROM `students` 
 
-Den Wert für eine Zelle mit der Spalte `firstname` und der Zeile mit id von 1 ändern
+--Den Wert für eine Zelle mit der Spalte `firstname` und der Zeile mit id von 1 ändern
 UPDATE `students` SET `firstname` = 'Brigitta' WHERE `id` = '1'
 
-Füge "Anna Alpha" in die Tabelle ein
+--Füge "Anna Alpha" in die Tabelle ein
 INSERT INTO `students`(`firstname`, `lastname`, `age`) VALUES ('Anna','Alpha','99')
 
-Lösche Einträge mit dem Nachnamen "Alpha"
+--Lösche Einträge mit dem Nachnamen "Alpha"
 DELETE FROM `students` WHERE `lastname`='Alpha'
 
-Einträge zählen von der Datenbank "posts"
+--Einträge zählen von der Datenbank "posts"
 SELECT COUNT(*) FROM `posts`
 
-Minimum, Maximum und Durchschnitt der Views auswählen
+--Minimum, Maximum und Durchschnitt der Views auswählen
 SELECT MIN(`views`),MAX(`views`),AVG(`views`) FROM `posts` 
 
-Zeige Posts mit weniger als 50 oder mehr als 100 Views.
+--Zeige Posts mit weniger als 50 oder mehr als 100 Views.
 SELECT * FROM `posts` WHERE `views`>100 OR `views` < 50
 
-Zeige Posts mit mehr als 10 und weniger als 100 Views.
+--Zeige Posts mit mehr als 10 und weniger als 100 Views.
 SELECT * FROM `posts` WHERE `views`>5 AND `views` < 100
 
-Zeige Einträge die mit "Hallo Welt" beginnen
+--Zeige Einträge die mit "Hallo Welt" beginnen
 SELECT * FROM `posts` WHERE `title` LIKE 'Hallo Welt%'
 
-Zeige Einträge die mit "Hallo Welt" beginnen und dann genau noch ein Zeichen danach haben
+--Zeige Einträge die mit "Hallo Welt" beginnen und dann genau noch ein Zeichen danach haben
 SELECT * FROM `posts` WHERE `title` LIKE 'Hallo Welt (_)'
 
-Zeige Spalten, bei denen die id in der Menge (1,2 oder 3) liegt.
+--Zeige Spalten, bei denen die id in der Menge (1,2 oder 3) liegt.
 SELECT * FROM `posts` WHERE `id` IN(1,2,3)
 
-Der Rückgabe einen Titel "Anzahl" geben
+--Der Rückgabe einen Titel "Anzahl" geben
 SELECT COUNT(*) AS Anzahl FROM `posts` 
 
-Nur unterschiedliche Titel anzeigen
+--Nur unterschiedliche Titel anzeigen
 SELECT DISTINCT `title` FROM `posts` 
 
-Abfrage nach Titel gruppieren und Anzahl pro Gruppe angeben
+--Abfrage nach Titel gruppieren und Anzahl pro Gruppe angeben
 SELECT  `title`, COUNT(*) FROM `posts` GROUP BY `title`
 
---> Achtung, wenn man die Spalte COUNT(*) weiterverwenden will für eine Selektion braucht man HAVING
---> HAVING kommt im Gegensatz zu WHERE erst nachdem der erste Teil ausgeführt wurde
+--Achtung, wenn man die Spalte COUNT(*) weiterverwenden will für eine Selektion braucht man HAVING
+--HAVING kommt im Gegensatz zu WHERE erst nachdem der erste Teil ausgeführt wurde
 SELECT  `title`, COUNT(*) AS Count FROM `posts` GROUP BY `title` HAVING `COUNT`>1
 
-Resultate absteigend nach views sortieren
+--Resultate absteigend nach views sortieren
 SELECT * FROM `posts` ORDER BY `views` DESC
 
-Nur die ersten beiden Zeilen zurückgeben (nach Sortierung)
+--Nur die ersten beiden Zeilen zurückgeben (nach Sortierung)
 SELECT * FROM `posts` ORDER BY `views` DESC LIMIT 2
 
-Die ersten drei Zeilen überspringen und dann zwei zurückgeben (nach Sortierung)
+--Die ersten drei Zeilen überspringen und dann zwei zurückgeben (nach Sortierung)
 SELECT * FROM `posts` ORDER BY `views` DESC LIMIT 3, 2
 
-Mehrere Werte in einer Spalte kombinieren
+--Mehrere Werte in einer Spalte kombinieren
 SELECT CONCAT(`firstname`," ",`lastname`) FROM `students` 
 
-Zeilen mit NULL im Titel ausgeben (Spezialfall: hier muss IS verwendet werden)
+--Zeilen mit NULL im Titel ausgeben (Spezialfall: hier muss IS verwendet werden)
 SELECT * FROM `posts` WHERE `title` IS NULL
 
 
