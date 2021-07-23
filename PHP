@@ -1,0 +1,33 @@
+//Wert zurückgeben:
+echo "Hallo Welt!";
+
+//Variable zuweisen (müssen nicht vorher deklariert werden)
+$testVar="Hallo";
+
+//Variable zurückgeben
+echo $testVar;
+
+//HTML zurückgeben (Konkatenation mit dem Punkt ".")
+echo "<h2>".$testVar."</h2>";
+
+//Logische Operatoren
+$bedingung=false;
+$bedingung2=true;
+$bed=!$bedingung;
+$bed2=($bedingung || $bedingung2);  //Bedingung 1 oder Bedingung 2 muss wahr sein
+$bed3=($bedingung && $bedingung2);  //Bedingung 1 UND Bedingung 2 müssen wahr sein
+$bed4=($bedingung xor $bedingung2); //Bedingung 1 oder Bedingung 2 muss wahr sein aber nicht beide
+var_dump($bed2); //gibt Variablentyp
+$zahl=11;
+if($zahl>20) {
+	echo "statement true";
+} else {
+	echo "statement false";
+} //hier im Beispiel wird das else ausgeführt
+
+//While Schleife
+$zahl=0;
+while($zahl<11) {   //wiederhole Schleifeninhalt bis Zahl 11 oder grösser ist
+  echo $zahl;
+  $zahl+=1;          //Zahl jeweils um 1 erhöhen
+} // also werden hier im Beispiel die Zahlen 0 bis 10 ausgegeben
