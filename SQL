@@ -1,0 +1,21 @@
+Alle Spalten und Zeilen einer Tabelle "students" auswählen:
+SELECT * FROM `students` 
+
+Nur die Zeile mit einer id von "1" auswählen
+SELECT * FROM `students` WHERE id='1'
+
+Von allen Zeilen nur die Spalte "firstname" auswählen
+SELECT `firstname` FROM `students` 
+
+Den Wert für eine Zelle mit der Spalte `firstname` und der Zeile mit id von 1 ändern
+UPDATE `students` SET `firstname` = 'Brigitta' WHERE `id` = '1'
+
+Füge "Anna Alpha" in die Tabelle ein
+INSERT INTO `students`(`firstname`, `lastname`, `age`) VALUES ('Anna','Alpha','99')
+
+Lösche Einträge mit dem Nachnamen "Alpha"
+DELETE FROM `students` WHERE `lastname`='Alpha'
+
+Einträge zählen von der Datenbank "posts"
+SELECT COUNT(*) FROM `posts`
+
