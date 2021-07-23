@@ -31,3 +31,24 @@ while($zahl<11) {   //wiederhole Schleifeninhalt bis Zahl 11 oder grösser ist
   echo $zahl;
   $zahl+=1;          //Zahl jeweils um 1 erhöhen
 } // also werden hier im Beispiel die Zahlen 0 bis 10 ausgegeben
+
+//do while Schleife; Unterschied: Bedingung wird erst am Ende geprüft
+do {
+  echo $zahl;
+  $zahl+=1;          
+}while($zahl<11);
+
+//Arrays
+$geschlechter = array("m","f","n");
+echo $geschlechter[0]; //gibt m aus
+for($i=0; $i<count($geschlechter); $i++){
+echo geschlechter[$i];
+}
+
+
+
+//Include, um selben Baustein in mehrere Unterseiten zu integrieren, z.B. Navigation
+include 'Dateiname.php';
+
+//Require, funktioniert ähnlich wie include, wenn die Datei nicht vorhanden ist, wird die Seite aber nicht geladen
+require 'Dateiname.php';
