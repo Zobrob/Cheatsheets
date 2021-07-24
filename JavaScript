@@ -43,3 +43,12 @@ console.log("Hallo");
 
 //Eingabe verlangen und in Variable speichern
 let name = prompt("enter your name: ");
+
+//Conditionals
+if (age < 18) {
+   console.log("Du bist noch nicht 18 Jahre alt.")
+} else if (age == 18) {
+  console.log("Du bist genau 18 Jahre alt.")
+} else {
+    console.log("Du bist älter als 18 Jahre.")
+}
