@@ -19,8 +19,27 @@ let quote='You had me at "hello"';
 //Bei Strings können Buchstaben über Index aufgerufen werden
 city[3]; //'y'
 
+//Teil von String extrahieren
+"sunflower".slice(0, 3); //"sun" - von Index 0 bis Index 3
+
 // String Methoden:
 'hello'.toUpperCase(); // alles Grossbuchstaben "HELLO";
 'LOL'.toLowerCase(); // alles kleingeschrieben "lol"
 '    omg  '.trim(); // Leerzeichen entfernen "omg"
+'hello'.replace('lo','p'); // ersetze den ersten Teil mit dem zweiten; ergibt 'help' 
 
+// String mit Variablen
+`Du hast ${Anzahl} Bananen gekauft`;
+
+//integriertes Math Objekt
+Math.round(3.9); // rundet auf 4
+Math.pow(2,3); // 2 hoch 3 gibt 8
+
+// zufällige Ganzzahl
+Math.floor(Math.random()*10)+1; // Zufallszahl zwischen 1 und 10
+
+//Output zur Konsole
+console.log("Hallo");
+
+//Eingabe verlangen und in Variable speichern
+let name = prompt("enter your name: ");
