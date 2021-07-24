@@ -1,0 +1,26 @@
+//Variable zuweisen
+let someVar = *Hallo";
+
+//Const (wie Variable aber Wert kann nicht geändert werden)
+const age = 18;
+
+//Wert von Variable um Zahl erhöhen:
+numberOfCats += 2;
+
+//Strings haben eine Länge:
+city.length; //5
+
+//Anführungszeichen in String
+let quote='You had me at "hello"';
+
+//Strings kombinieren
+"Heute " + "ist " + "das Wetter " + "regnerisch."
+
+//Bei Strings können Buchstaben über Index aufgerufen werden
+city[3]; //'y'
+
+// String Methoden:
+'hello'.toUpperCase(); // alles Grossbuchstaben "HELLO";
+'LOL'.toLowerCase(); // alles kleingeschrieben "lol"
+'    omg  '.trim(); // Leerzeichen entfernen "omg"
+
