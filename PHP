@@ -63,8 +63,16 @@ function addierenMitZahl($zahl1, $zahl2=10) {
 	echo $zahl1 + $zahl2;
 }
 
+//Datum und Uhrzeit
+echo date("d.m.Y - H:i:s");
+
+//Timestamp Sekunden seit 1.1.1970 um 0 Uhr
+time();
+
 //Include, um selben Baustein in mehrere Unterseiten zu integrieren, z.B. Navigation
 include 'Dateiname.php';
 
 //Require, funktioniert ähnlich wie include, wenn die Datei nicht vorhanden ist, wird die Seite aber nicht geladen
 require 'Dateiname.php';
+
+
