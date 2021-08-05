@@ -52,3 +52,8 @@ if (age < 18) {
 } else {
     console.log("Du bist älter als 18 Jahre.")
 }
+
+//Logische Operatoren (verbinden Aussagen)
+&& // Und (wird vor "oder" ausgeführt)
+|| // Oder
+! // Nicht (kehrt Wahrheitswert um), z.B. !false ist true
